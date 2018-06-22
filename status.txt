@@ -1,0 +1,10 @@
+[{	command : BS1024_Max256_LR.2_LRWS16000_test.sh,
+	status : finished
+	},
+{	command : BS2048_Max256_LR.2_LRWS16000_single.sh,
+	status : not yet,
+}, 
+{	command : BS4096_Max256_LR.2_LRWS16000_single.sh,
+	status : not yet,
+},
+]
