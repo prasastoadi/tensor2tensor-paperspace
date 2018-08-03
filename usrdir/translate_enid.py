@@ -82,7 +82,7 @@ _ENID_TEST_DATASETS = [
 
 
 @registry.register_problem
-class TranslateEnidIwslt32k(translate.TranslateProblem):
+class TranslateEnidIwslt32kNotok(translate.TranslateProblem):
   """Problem spec for IWSLT'15 En-Vi translation."""
 
   @property

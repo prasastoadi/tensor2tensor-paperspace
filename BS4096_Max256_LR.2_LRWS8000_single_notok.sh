@@ -2,7 +2,7 @@
 pip install tensor2tensor
 
 t2t-trainer \
---problem=translate_enid_iwslt32k \
+--problem=translate_enid_iwslt32k_notok \
 --model=transformer \
 --hparams_set=transformer_base \
 --data_dir=/storage/data_notok/ \
