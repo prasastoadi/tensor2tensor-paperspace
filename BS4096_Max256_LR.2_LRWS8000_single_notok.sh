@@ -13,3 +13,4 @@ t2t-trainer \
 --train_steps=100000 \
 --hparams=max_length=256,batch_size=4096,learning_rate=0.2,learning_rate_warmup_steps=8000 \
 --generate_data \
+--t2t_usr_dir=usrdir
