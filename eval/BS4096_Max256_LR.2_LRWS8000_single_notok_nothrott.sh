@@ -12,7 +12,8 @@ t2t-translate-all \
 --model=transformer \
 --data_dir=/storage/data_notok \
 --hparams_set=transformer_base \
---hparams=max_length=256,batch_size=4096,learning_rate=0.2,learning_rate_warmup_steps=8000
+--hparams=max_length=256,batch_size=4096,learning_rate=0.2,learning_rate_warmup_steps=8000 \
+--min_steps=5000
 
 t2t-bleu \
 --reference=/storage/corpus/dev/IWSLT17.TED.dev2010.en-id/IWSLT17.TED.dev2010.en-id.id \
