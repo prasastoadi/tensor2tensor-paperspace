@@ -40,9 +40,46 @@ EOS = text_encoder.EOS_ID
 
 _REPO = "https://github.com/prasastoadi/parallel-corpora-en-id/raw/master/"
 
+
+# IWSLT17 :
+# 107329 sentences
+# https://wit3.fbk.eu/mt.php?release=2017-01-more
+# PANL-BPPT :
+# 24024 sentences
+# http://www.panl10n.net/english/outputs/Indonesia/BPPT/0902/BPPTIndToEngCorpusHalfM.zip # pylint: disable=line-too-long
+_ENID_TRAIN_DATASETS = [
+    [
+        _REPO + "IWSLT17.train.en-id.tgz",
+        ("IWSLT17.train.en-id.en", "IWSLT17.train.en-id.id")
+    ],
+    [
+        _REPO + "PANL-BPPT-ECO-EN-ID-150Kw.tgz",
+        ("PANL-BPPT-ECO-EN-150Kw.txt", "PANL-BPPT-ECO-ID-150Kw.txt")
+    ],
+    [
+        _REPO + "PANL-BPPT-INT-EN-ID-150Kw.tgz",
+        ("PANL-BPPT-INT-EN-150Kw.txt", "PANL-BPPT-INT-ID-150Kw.txt")
+    ],
+    [
+        _REPO + "PANL-BPPT-SCI-EN-ID-100Kw.tgz",
+        ("PANL-BPPT-SCI-EN-100Kw.txt", "PANL-BPPT-SCI-ID-100Kw.txt")
+    ],
+    [
+        _REPO + "PANL-BPPT-SPO-EN-ID-100Kw.tgz",
+        ("PANL-BPPT-SPO-EN-100Kw.txt", "PANL-BPPT-SPO-ID-100Kw.txt")
+    ],
+]
+
+_ENID_TRAIN_DATASETS_ONLY = [
+    [
+        _REPO + "IWSLT17.train.en-id.tgz",
+        ("IWSLT17.train.en-id.en", "IWSLT17.train.en-id.id")
+    ],
+]
+
 # OpenSubtitles2018 :
 # 9268181 sentences
-_ENID_TRAIN_DATASETS = [
+_ENID_TRAIN_DATASETS_OS = [
     [
         "https://s3.wasabisys.com/nmt/OpenSubtitles2018.en-id.tgz",
         ("OpenSubtitles2018.en-id.en", "OpenSubtitles2018.en-id.id")
@@ -91,4 +128,20 @@ class TranslateEnidIwslt32kOs(translate.TranslateProblem):
 
   def source_data_files(self, dataset_split):
     train = dataset_split == problem.DatasetSplit.TRAIN
-    return _ENID_TRAIN_DATASETS if train else _ENID_TEST_DATASETS
+    return _ENID_TRAIN_DATASETS_OS if train else _ENID_TEST_DATASETS
+
+@registry.register_problem
+class TranslateEnidIwslt32kOnly(translate.TranslateProblem):
+  """Problem spec for IWSLT'15 En-Vi translation."""
+
+  @property
+  def approx_vocab_size(self):
+    return 2**15  # 32768
+
+  @property
+  def vocab_filename(self):
+    return "vocab.enid.%d" % self.approx_vocab_size
+
+  def source_data_files(self, dataset_split):
+    train = dataset_split == problem.DatasetSplit.TRAIN
+    return _ENID_TRAIN_DATASETS_ONLY if train else _ENID_TEST_DATASETS
