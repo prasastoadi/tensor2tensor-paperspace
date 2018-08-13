@@ -44,7 +44,7 @@ _REPO = "https://github.com/prasastoadi/parallel-corpora-en-id/raw/master/"
 # 9268181 sentences
 _ENID_TRAIN_DATASETS = [
     [
-        "http://opus.nlpl.eu/download/OpenSubtitles2018/en-id.txt.zip",
+        "https://s3.wasabisys.com/nmt/OpenSubtitles2018.en-id.tgz",
         ("OpenSubtitles2018.en-id.en", "OpenSubtitles2018.en-id.id")
     ],
 ]
