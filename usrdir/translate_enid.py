@@ -77,6 +77,25 @@ _ENID_TRAIN_DATASETS_ONLY = [
     ],
 ]
 
+_ENID_TRAIN_DATASETS_BPPT = [
+    [
+        _REPO + "PANL-BPPT-ECO-EN-ID-150Kw.tgz",
+        ("PANL-BPPT-ECO-EN-150Kw.txt", "PANL-BPPT-ECO-ID-150Kw.txt")
+    ],
+    [
+        _REPO + "PANL-BPPT-INT-EN-ID-150Kw.tgz",
+        ("PANL-BPPT-INT-EN-150Kw.txt", "PANL-BPPT-INT-ID-150Kw.txt")
+    ],
+    [
+        _REPO + "PANL-BPPT-SCI-EN-ID-100Kw.tgz",
+        ("PANL-BPPT-SCI-EN-100Kw.txt", "PANL-BPPT-SCI-ID-100Kw.txt")
+    ],
+    [
+        _REPO + "PANL-BPPT-SPO-EN-ID-100Kw.tgz",
+        ("PANL-BPPT-SPO-EN-100Kw.txt", "PANL-BPPT-SPO-ID-100Kw.txt")
+    ],
+]
+
 # OpenSubtitles2018 :
 # 9268181 sentences
 _ENID_TRAIN_DATASETS_OS = [
@@ -145,3 +164,19 @@ class TranslateEnidIwslt32kOnly(translate.TranslateProblem):
   def source_data_files(self, dataset_split):
     train = dataset_split == problem.DatasetSplit.TRAIN
     return _ENID_TRAIN_DATASETS_ONLY if train else _ENID_TEST_DATASETS
+
+@registry.register_problem
+class TranslateEnidIwslt32kBppt(translate.TranslateProblem):
+  """Problem spec for IWSLT'15 En-Vi translation."""
+
+  @property
+  def approx_vocab_size(self):
+    return 2**15  # 32768
+
+  @property
+  def vocab_filename(self):
+    return "vocab.enid.%d" % self.approx_vocab_size
+
+  def source_data_files(self, dataset_split):
+    train = dataset_split == problem.DatasetSplit.TRAIN
+    return _ENID_TRAIN_DATASETS_BPPT if train else _ENID_TEST_DATASETS
