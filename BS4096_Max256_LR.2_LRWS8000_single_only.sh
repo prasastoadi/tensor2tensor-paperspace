@@ -1,5 +1,5 @@
 #!/bin/bash
-pip install -qU tensorflow==1.8.0
+pip install --upgrade pip
 pip install -qU tensor2tensor==1.7.0
 
 t2t-trainer \
