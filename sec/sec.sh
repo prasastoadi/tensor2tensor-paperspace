@@ -1,5 +1,5 @@
 pip install --upgrade pip
-pip install tensor2tensor==1.7.0
+pip install tensor2tensor==1.6.3
 
 t2t-trainer \
 --problem=translate_enid_iwslt32k_notok_plus_os \
