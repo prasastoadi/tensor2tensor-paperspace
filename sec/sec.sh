@@ -5,7 +5,7 @@ t2t-trainer \
 --problem=translate_enid_iwslt32k_notok_plus_os \
 --model=transformer \
 --hparams_set=transformer_base \
---data_dir=/storage/data_notok_plus_os/ \
+--data_dir=/storage/data_notok_plus_os_v100/ \
 --output_dir=/storage/train/BS4096_Max128_LR.2_LRWS8000_base_notok_plus_os_v100/ \
 --eval_steps=100 \
 --keep_checkpoint_max=100 \
