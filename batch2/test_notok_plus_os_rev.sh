@@ -1,3 +1,6 @@
+pip install --upgrade pip
+pip install tensor2tensor==1.7.0
+
 t2t-avg-all \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev \
 --output_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg \
