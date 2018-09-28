@@ -23,7 +23,7 @@ t2t-translate-all \
 
 t2t-bleu \
 --reference=/storage/corpus/dev/IWSLT17.TED.dev2010.en-id/IWSLT17.TED.dev2010.en-id.en \
---translations_dir=/storage/translated/dev/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avgIWSLT17.TED.dev2010.en-id \
+--translations_dir=/storage/translated/dev/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/IWSLT17.TED.dev2010.en-id \
 --event_dir=/storage/translated/dev/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/IWSLT17.TED.dev2010.en-id
 
 t2t-translate-all \
