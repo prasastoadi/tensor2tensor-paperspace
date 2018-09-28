@@ -11,7 +11,7 @@ t2t-translate-all \
 --t2t_usr_dir=usrdir \
 --problem=translate_enid_iwslt32k_notok_plus_os_rev \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg \
---source=/storage/corpus/dev/IWSLT17.TED.dev2010.en-id/IWSLT17.TED.dev2010.en-id.en \
+--source=/storage/corpus/dev/IWSLT17.TED.dev2010.en-id/IWSLT17.TED.dev2010.en-id.id \
 --translations_dir=/storage/translated/dev/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/IWSLT17.TED.dev2010.en-id \
 --beam_size=4 \
 --alpha=0.6 \
@@ -22,7 +22,7 @@ t2t-translate-all \
 --min_steps=5000
 
 t2t-bleu \
---reference=/storage/corpus/dev/IWSLT17.TED.dev2010.en-id/IWSLT17.TED.dev2010.en-id.id \
+--reference=/storage/corpus/dev/IWSLT17.TED.dev2010.en-id/IWSLT17.TED.dev2010.en-id.en \
 --translations_dir=/storage/translated/dev/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avgIWSLT17.TED.dev2010.en-id \
 --event_dir=/storage/translated/dev/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/IWSLT17.TED.dev2010.en-id
 
@@ -30,7 +30,7 @@ t2t-translate-all \
 --t2t_usr_dir=usrdir \
 --problem=translate_enid_iwslt32k_notok_plus_os_rev \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg \
---source=/storage/corpus/test/test.go.id.en \
+--source=/storage/corpus/test/test.go.id.id \
 --translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/test.go.id \
 --beam_size=4 \
 --alpha=0.6 \
@@ -41,7 +41,7 @@ t2t-translate-all \
 --min_steps=5000
 
 t2t-bleu \
---reference=/storage/corpus/test/test.go.id.id \
+--reference=/storage/corpus/test/test.go.id.en \
 --translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/test.go.id \
 --event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/test.go.id
 
@@ -49,7 +49,7 @@ t2t-translate-all \
 --t2t_usr_dir=usrdir \
 --problem=translate_enid_iwslt32k_notok_plus_os_rev \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg \
---source=/storage/corpus/test/IWSLT17.TED.tst2017plus.en-id.en \
+--source=/storage/corpus/test/IWSLT17.TED.tst2017plus.en-id.id \
 --translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/tst2017plus \
 --beam_size=4 \
 --alpha=0.6 \
@@ -60,7 +60,7 @@ t2t-translate-all \
 --min_steps=5000
 
 t2t-bleu \
---reference=/storage/corpus/test/IWSLT17.TED.tst2017plus.en-id.id \
+--reference=/storage/corpus/test/IWSLT17.TED.tst2017plus.en-id.en \
 --translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/tst2017plus \
 --event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/tst2017plus
 
@@ -68,7 +68,7 @@ t2t-translate-all \
 --t2t_usr_dir=usrdir \
 --problem=translate_enid_iwslt32k_notok_plus_os_rev \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg \
---source=/storage/corpus/test/IWSLT17.TED.tst2010.en-id.en \
+--source=/storage/corpus/test/IWSLT17.TED.tst2010.en-id.id \
 --translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/tst2010 \
 --beam_size=4 \
 --alpha=0.6 \
@@ -79,6 +79,6 @@ t2t-translate-all \
 --min_steps=5000
 
 t2t-bleu \
---reference=/storage/corpus/test/IWSLT17.TED.tst2010.en-id.id \
+--reference=/storage/corpus/test/IWSLT17.TED.tst2010.en-id.en \
 --translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/tst2010 \
 --event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/avg/tst2010
