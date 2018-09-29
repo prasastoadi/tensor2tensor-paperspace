@@ -13,7 +13,7 @@ t2t-translate-all \
 --data_dir=/storage/data_notok_plus_os_rev \
 --hparams_set=transformer_base \
 --hparams=max_length=256,batch_size=4096,learning_rate=0.2,learning_rate_warmup_steps=8000 \
---min_steps=5000
+--min_steps=80000
 
 t2t-bleu \
 --reference=/storage/corpus/test/test.go.id.en \
@@ -32,7 +32,7 @@ t2t-translate-all \
 --data_dir=/storage/data_notok_plus_os_rev \
 --hparams_set=transformer_base \
 --hparams=max_length=256,batch_size=4096,learning_rate=0.2,learning_rate_warmup_steps=8000 \
---min_steps=5000
+--min_steps=80000
 
 t2t-bleu \
 --reference=/storage/corpus/test/IWSLT17.TED.tst2017plus.en-id.en \
@@ -51,7 +51,7 @@ t2t-translate-all \
 --data_dir=/storage/data_notok_plus_os_rev \
 --hparams_set=transformer_base \
 --hparams=max_length=256,batch_size=4096,learning_rate=0.2,learning_rate_warmup_steps=8000 \
---min_steps=5000
+--min_steps=80000
 
 t2t-bleu \
 --reference=/storage/corpus/test/IWSLT17.TED.tst2010.en-id.en \
