@@ -6,7 +6,7 @@ t2t-translate-all \
 --problem=translate_enid_iwslt32k_notok_plus_os_rev \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev \
 --source=/storage/corpus/test/test.go.id.id \
---translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/test.go.id \
+--translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/test.go.id.fix \
 --beam_size=4 \
 --alpha=0.6 \
 --model=transformer \
@@ -17,15 +17,15 @@ t2t-translate-all \
 
 t2t-bleu \
 --reference=/storage/corpus/test/test.go.id.en \
---translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/test.go.id \
---event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/test.go.id
+--translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/test.go.id.fix \
+--event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/test.go.id.fix
 
 t2t-translate-all \
 --t2t_usr_dir=usrdir \
 --problem=translate_enid_iwslt32k_notok_plus_os_rev \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev \
 --source=/storage/corpus/test/IWSLT17.TED.tst2017plus.en-id.id \
---translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2017plus \
+--translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2017plus.fix \
 --beam_size=4 \
 --alpha=0.6 \
 --model=transformer \
@@ -36,15 +36,15 @@ t2t-translate-all \
 
 t2t-bleu \
 --reference=/storage/corpus/test/IWSLT17.TED.tst2017plus.en-id.en \
---translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2017plus \
---event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2017plus
+--translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2017plus.fix \
+--event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2017plus.fix
 
 t2t-translate-all \
 --t2t_usr_dir=usrdir \
 --problem=translate_enid_iwslt32k_notok_plus_os_rev \
 --model_dir=/storage/train/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev \
 --source=/storage/corpus/test/IWSLT17.TED.tst2010.en-id.id \
---translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2010 \
+--translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2010.fix \
 --beam_size=4 \
 --alpha=0.6 \
 --model=transformer \
@@ -55,5 +55,5 @@ t2t-translate-all \
 
 t2t-bleu \
 --reference=/storage/corpus/test/IWSLT17.TED.tst2010.en-id.en \
---translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2010 \
---event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2010
+--translations_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2010.fix \
+--event_dir=/storage/translated/test/BS4096_Max256_LR.2_LRWS8000_single_notok_plus_os_rev/tst2010.fix
